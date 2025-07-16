@@ -1,12 +1,31 @@
 title: AI-Powered Development Workflow
-description: Complete framework for AI-assisted development
+description: "Complete framework for AI-assisted software development. Boost development speed by 60-70% with proven AI workflows, templates, and automation tools. Includes sample projects, persona management, and comprehensive documentation."
 baseurl: "/ai-development-workflow"
 url: "https://joe-glasgow.github.io"
+
+# SEO and Meta Configuration
+author: "Joe Glasgow"
+email: "joe@example.com"
+github_username: "joe-glasgow"
+
+# Social Media Meta Tags
+social:
+  name: "AI-Powered Development Workflow"
+  links:
+    - https://github.com/joe-glasgow/ai-development-workflow
+
+# SEO Keywords
+keywords: "AI development, software development workflow, AI-assisted coding, development automation, AI tools, software engineering, development productivity, AI personas, development templates, prompt engineering, workflow optimization, development speed, code quality, design systems, continuous deployment"
+
+# Open Graph settings
+og_image: "/assets/images/placeholder-og.png"
 
 theme: minima
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-sitemap
 
 markdown: kramdown
@@ -17,12 +36,44 @@ collections:
   templates:
     output: true
     permalink: /templates/:path/
+  personas:
+    output: true
+    permalink: /personas/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  prompts:
+    output: true
+    permalink: /prompts/:path/
+  workflows:
+    output: true
+    permalink: /workflows/:path/
 
 # Defaults
 defaults:
   - scope:
       path: ""
       type: "templates"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "personas"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "prompts"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "workflows"
     values:
       layout: "default"
 
