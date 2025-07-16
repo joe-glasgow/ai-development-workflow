@@ -12,7 +12,25 @@ plugins:
 markdown: kramdown
 highlighter: rouge
 
+# Collections
+collections:
+  templates:
+    output: true
+    permalink: /templates/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "templates"
+    values:
+      layout: "default"
+
+# Exclude from processing
 exclude:
   - node_modules
   - package.json
   - package-lock.json
+  - Gemfile.lock
+  - .gitignore
+  - README.md
