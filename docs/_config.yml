@@ -1,0 +1,18 @@
+title: AI-Powered Development Workflow
+description: Complete framework for AI-assisted development
+baseurl: "/ai-development-workflow"
+url: "https://yourusername.github.io"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
