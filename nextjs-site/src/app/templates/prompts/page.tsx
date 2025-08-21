@@ -1,125 +1,23 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/ui/PageHero'
+import GettingStarted from '@/components/ui/GettingStarted'
+import { promptCategories, commonPatterns, getGitHubTemplateUrl } from '@/data/templates'
 
 export default function PromptsPage() {
-  const promptCategories = [
-    {
-      category: "Development Prompts",
-      description: "AI prompts for coding, architecture, and technical implementation",
-      icon: "💻",
-      prompts: [
-        {
-          name: "Component Development",
-          description: "Create reusable React/Vue components with best practices",
-          useCase: "Building UI components with proper TypeScript types and accessibility",
-          tags: ["React", "Vue", "TypeScript", "Accessibility"]
-        },
-        {
-          name: "API Design",
-          description: "Design RESTful APIs and GraphQL schemas",
-          useCase: "Creating scalable backend APIs with proper documentation",
-          tags: ["REST", "GraphQL", "OpenAPI", "Documentation"]
-        },
-        {
-          name: "Database Schema",
-          description: "Design efficient database structures and relationships",
-          useCase: "Creating normalized database schemas with proper indexing",
-          tags: ["SQL", "NoSQL", "Indexing", "Performance"]
-        },
-        {
-          name: "Testing Strategy",
-          description: "Comprehensive testing approaches for different scenarios",
-          useCase: "Unit, integration, and e2e testing with proper coverage",
-          tags: ["Jest", "Cypress", "Testing Library", "Coverage"]
-        }
-      ]
-    },
-    {
-      category: "Design Prompts",
-      description: "AI prompts for UI/UX design and visual development",
-      icon: "🎨",
-      prompts: [
-        {
-          name: "UI Design System",
-          description: "Create consistent design systems and component libraries",
-          useCase: "Building scalable design systems with tokens and guidelines",
-          tags: ["Design System", "Tokens", "Components", "Guidelines"]
-        },
-        {
-          name: "User Experience Flow",
-          description: "Design intuitive user journeys and interactions",
-          useCase: "Mapping user flows and optimizing conversion paths",
-          tags: ["User Flow", "UX", "Conversion", "Analytics"]
-        },
-        {
-          name: "Responsive Design",
-          description: "Create mobile-first responsive layouts",
-          useCase: "Building adaptive interfaces for all device sizes",
-          tags: ["Mobile-First", "Breakpoints", "Grid", "Flexbox"]
-        },
-        {
-          name: "Accessibility Audit",
-          description: "Ensure WCAG compliance and inclusive design",
-          useCase: "Making applications accessible to all users",
-          tags: ["WCAG", "Screen Readers", "Keyboard Navigation", "Color Contrast"]
-        }
-      ]
-    },
-    {
-      category: "Deployment Prompts",
-      description: "AI prompts for DevOps, CI/CD, and infrastructure",
-      icon: "🚀",
-      prompts: [
-        {
-          name: "CI/CD Pipeline",
-          description: "Automated build, test, and deployment workflows",
-          useCase: "Setting up continuous integration and deployment",
-          tags: ["GitHub Actions", "Jenkins", "Docker", "Kubernetes"]
-        },
-        {
-          name: "Cloud Infrastructure",
-          description: "Scalable cloud architecture and resource management",
-          useCase: "Deploying applications on AWS, Azure, or GCP",
-          tags: ["AWS", "Azure", "GCP", "Terraform"]
-        },
-        {
-          name: "Performance Monitoring",
-          description: "Application monitoring and performance optimization",
-          useCase: "Setting up monitoring, logging, and alerting systems",
-          tags: ["Monitoring", "Logging", "Alerts", "Performance"]
-        },
-        {
-          name: "Security Hardening",
-          description: "Security best practices and vulnerability assessment",
-          useCase: "Implementing security measures and compliance",
-          tags: ["Security", "HTTPS", "Authentication", "Compliance"]
-        }
-      ]
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       <main className="container-max section-padding">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI Prompt Library
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Curated collection of AI prompts for every stage of software development. 
-            From initial design to deployment, these prompts help you get better results from AI assistants.
-          </p>
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold text-green-900 mb-2">Prompt Engineering Tips</h3>
-            <p className="text-green-800">
-              Be specific about your requirements, provide context about your project, 
-              and iterate on prompts to get the best results from your AI assistant.
-            </p>
-          </div>
-        </div>
+        <PageHero
+          title="AI Prompt Library"
+          description="Curated collection of AI prompts for every stage of software development. From initial design to deployment, these prompts help you get better results from AI assistants."
+          tipTitle="Prompt Engineering Tips"
+          tipDescription="Be specific about your requirements, provide context about your project, and iterate on prompts to get the best results from your AI assistant."
+          tipColor="green"
+        />
 
         {/* Prompt Categories */}
         {promptCategories.map((category, categoryIndex) => (
@@ -158,7 +56,7 @@ export default function PromptsPage() {
                   </div>
                   
                   <a 
-                    href={`https://github.com/joe-glasgow/ai-development-workflow/blob/main/templates/prompt-templates/${category.category.toLowerCase().replace(' ', '-')}/${prompt.name.toLowerCase().replace(' ', '-')}.md`}
+                    href={getGitHubTemplateUrl('prompt', prompt.name)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm"
@@ -243,6 +141,8 @@ export default function PromptsPage() {
             </div>
           </div>
         </div>
+
+        <GettingStarted links={commonPatterns.gettingStartedLinks} />
       </main>
 
       <Footer />

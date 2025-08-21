@@ -1,95 +1,23 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import PageHero from '@/components/ui/PageHero'
+import GettingStarted from '@/components/ui/GettingStarted'
+import { personas, commonPatterns, getGitHubTemplateUrl } from '@/data/templates'
 
 export default function PersonasPage() {
-  const personas = [
-    {
-      name: "Project Manager",
-      description: "Planning, coordination, and project oversight with AI assistance",
-      skills: ["Project Planning", "Resource Management", "Risk Assessment", "Stakeholder Communication"],
-      useCase: "Coordinate development phases, manage timelines, and ensure deliverables meet requirements",
-      icon: "📋"
-    },
-    {
-      name: "Product Manager", 
-      description: "Feature prioritization and product strategy with data-driven insights",
-      skills: ["Feature Prioritization", "Market Analysis", "User Research", "Roadmap Planning"],
-      useCase: "Define product requirements, analyze user feedback, and guide feature development",
-      icon: "🎯"
-    },
-    {
-      name: "UX Designer",
-      description: "User experience design and interface optimization",
-      skills: ["User Research", "Wireframing", "Prototyping", "Usability Testing"],
-      useCase: "Create intuitive interfaces, conduct user research, and optimize user journeys",
-      icon: "🎨"
-    },
-    {
-      name: "Frontend Developer",
-      description: "UI implementation and client-side development",
-      skills: ["React/Vue/Angular", "CSS/Tailwind", "JavaScript/TypeScript", "Responsive Design"],
-      useCase: "Build interactive user interfaces, implement designs, and optimize performance",
-      icon: "💻"
-    },
-    {
-      name: "Backend Developer",
-      description: "Server-side logic and API development",
-      skills: ["API Design", "Database Management", "Authentication", "Performance Optimization"],
-      useCase: "Create robust APIs, manage data flow, and ensure system scalability",
-      icon: "⚙️"
-    },
-    {
-      name: "Mobile Developer",
-      description: "Cross-platform mobile application development",
-      skills: ["React Native", "Flutter", "iOS/Android", "Mobile UX"],
-      useCase: "Build native mobile experiences with cross-platform efficiency",
-      icon: "📱"
-    },
-    {
-      name: "DevOps Engineer",
-      description: "Deployment, infrastructure, and automation",
-      skills: ["CI/CD", "Cloud Platforms", "Containerization", "Monitoring"],
-      useCase: "Automate deployments, manage infrastructure, and ensure system reliability",
-      icon: "🚀"
-    },
-    {
-      name: "QA Engineer",
-      description: "Testing strategies and quality assurance",
-      skills: ["Test Automation", "Bug Tracking", "Performance Testing", "Quality Metrics"],
-      useCase: "Ensure code quality, automate testing processes, and maintain high standards",
-      icon: "🔍"
-    },
-    {
-      name: "Data Scientist",
-      description: "Data analysis and machine learning insights",
-      skills: ["Data Analysis", "Machine Learning", "Statistical Modeling", "Data Visualization"],
-      useCase: "Extract insights from data, build predictive models, and drive data-driven decisions",
-      icon: "📊"
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-white">
       <Header />
       
       <main className="container-max section-padding">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            AI Personas Library
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Role-specific AI personas that provide context and expertise for different aspects of software development. 
-            Each persona brings specialized knowledge to enhance your AI-assisted workflow.
-          </p>
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-4xl mx-auto">
-            <h3 className="text-lg font-semibold text-blue-900 mb-2">How to Use Personas</h3>
-            <p className="text-blue-800">
-              Copy the persona context into your AI conversations to get specialized responses. 
-              Each persona includes role-specific knowledge, best practices, and focused expertise.
-            </p>
-          </div>
-        </div>
+        <PageHero
+          title="AI Personas Library"
+          description="Role-specific AI personas that provide context and expertise for different aspects of software development. Each persona brings specialized knowledge to enhance your AI-assisted workflow."
+          tipTitle="How to Use Personas"
+          tipDescription="Copy the persona context into your AI conversations to get specialized responses. Each persona includes role-specific knowledge, best practices, and focused expertise."
+          tipColor="blue"
+        />
 
         {/* Personas Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -119,7 +47,7 @@ export default function PersonasPage() {
               </div>
               
               <a 
-                href={`https://github.com/joe-glasgow/ai-development-workflow/blob/main/templates/persona-templates/${persona.name.replace(' ', '')}.md`}
+                href={getGitHubTemplateUrl('persona', persona.name)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm"
@@ -163,6 +91,8 @@ export default function PersonasPage() {
             </div>
           </div>
         </div>
+
+        <GettingStarted links={commonPatterns.gettingStartedLinks} />
       </main>
 
       <Footer />
