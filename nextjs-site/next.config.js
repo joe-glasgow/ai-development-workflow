@@ -9,6 +9,10 @@ const nextConfig = {
   },
   basePath: isProd ? '/ai-development-workflow' : '',
   assetPrefix: isProd ? '/ai-development-workflow/' : '',
+  eslint: {
+    // Disable ESLint during builds since we run it separately
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig

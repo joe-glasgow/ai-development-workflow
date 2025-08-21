@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Metadata } from 'next'
+import Image from 'next/image'
 import { products, categories, getFeaturedProducts } from '@/data/products'
 import { Product } from '@/types/product'
 import { CartProvider, useCart } from '@/contexts/CartContext'
@@ -19,9 +19,11 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <div className="card hover:shadow-xl transition-shadow duration-300">
       <div className="relative mb-4">
-        <img
+        <Image
           src={product.image}
           alt={product.name}
+          width={400}
+          height={192}
           className="w-full h-48 object-cover rounded-lg"
         />
         {product.originalPrice && (
@@ -85,7 +87,7 @@ function ProductCard({ product }: { product: Product }) {
 
 // Shopping Cart Component
 function ShoppingCart() {
-  const { cart, removeFromCart, updateQuantity, clearCart } = useCart()
+  const { cart, updateQuantity, clearCart } = useCart()
   const [isOpen, setIsOpen] = useState(false)
 
   if (cart.itemCount === 0) {
@@ -132,9 +134,11 @@ function ShoppingCart() {
             {cart.items.map((item) => (
               <div key={item.product.id} className="p-4 border-b border-gray-100">
                 <div className="flex items-center space-x-3">
-                  <img
+                  <Image
                     src={item.product.image}
                     alt={item.product.name}
+                    width={48}
+                    height={48}
                     className="w-12 h-12 object-cover rounded"
                   />
                   <div className="flex-1 min-w-0">

@@ -100,7 +100,7 @@ export default function PromptsPage() {
             <div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">📚 Use Examples</h3>
               <p className="text-gray-600 mb-4">
-                Provide examples of what you want or don't want. This helps the AI understand 
+                Provide examples of what you want or don&apos;t want. This helps the AI understand
                 your preferences and style.
               </p>
             </div>
