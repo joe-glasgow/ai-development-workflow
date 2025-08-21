@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function QuickStart() {
   return (
     <section id="quick-start" className="section-padding bg-gray-50">
@@ -34,9 +36,9 @@ export default function QuickStart() {
               <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Proven Results</span>
               <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Complete Example</span>
             </div>
-            <a href="/sample-project" className="btn btn-primary w-full">
+            <Link href="/sample-project" className="btn btn-primary w-full">
               View Sample Project
-            </a>
+            </Link>
           </div>
 
           {/* Option 2 */}
@@ -60,9 +62,9 @@ export default function QuickStart() {
               <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Guided Process</span>
               <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Flexible</span>
             </div>
-            <a href="/workflow-guide" className="btn btn-secondary w-full">
+            <Link href="/workflow-guide" className="btn btn-secondary w-full">
               View Workflow Guide
-            </a>
+            </Link>
           </div>
 
           {/* Option 3 */}
@@ -87,9 +89,9 @@ export default function QuickStart() {
               <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Pre-configured</span>
               <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Multiple Types</span>
             </div>
-            <a href="/templates" className="btn btn-secondary w-full">
+            <Link href="/templates" className="btn btn-secondary w-full">
               Browse Templates
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -97,7 +99,7 @@ export default function QuickStart() {
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Additional Resources</h3>
           <div className="grid md:grid-cols-4 gap-6">
-            <a href="/templates/personas" className="group">
+            <Link href="/templates/personas" className="group">
               <div className="card text-center group-hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,9 +109,9 @@ export default function QuickStart() {
                 <h4 className="font-semibold text-gray-900 mb-2">AI Personas</h4>
                 <p className="text-sm text-gray-600">Role-specific AI assistants</p>
               </div>
-            </a>
+            </Link>
             
-            <a href="/templates/prompts" className="group">
+            <Link href="/templates/prompts" className="group">
               <div className="card text-center group-hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -119,9 +121,9 @@ export default function QuickStart() {
                 <h4 className="font-semibold text-gray-900 mb-2">Prompt Library</h4>
                 <p className="text-sm text-gray-600">Ready-to-use AI prompts</p>
               </div>
-            </a>
+            </Link>
             
-            <a href="/templates/workflows" className="group">
+            <Link href="/templates/workflows" className="group">
               <div className="card text-center group-hover:shadow-lg transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -131,7 +133,7 @@ export default function QuickStart() {
                 <h4 className="font-semibold text-gray-900 mb-2">Workflows</h4>
                 <p className="text-sm text-gray-600">Development methodologies</p>
               </div>
-            </a>
+            </Link>
             
             <a href="https://github.com/joe-glasgow/ai-development-workflow" className="group">
               <div className="card text-center group-hover:shadow-lg transition-shadow">

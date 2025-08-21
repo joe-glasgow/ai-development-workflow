@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Workflow Guide - AI-Powered Development Workflow',
@@ -8,6 +10,7 @@ export const metadata: Metadata = {
 export default function WorkflowGuidePage() {
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       <div className="container-max section-padding">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -184,6 +187,7 @@ export default function WorkflowGuidePage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
