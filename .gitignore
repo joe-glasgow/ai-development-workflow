@@ -68,7 +68,7 @@ jspm_packages/
 
 # Next.js build output
 .next
-nextjs-site/out
+nextjs-site/out/*
 
 # Nuxt.js build / generate output
 .nuxt
@@ -180,6 +180,12 @@ Thumbs.db
 # Jekyll build files
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock
+
+# Archived docs (moved from docs/ to docs-archive/)
+docs-archive/
 
 # Python
 __pycache__/
@@ -280,4 +286,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 .dmypy.json
-dmypy.json 
+dmypy.json
