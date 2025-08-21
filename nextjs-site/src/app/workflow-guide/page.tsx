@@ -19,7 +19,7 @@ export default function WorkflowGuidePage() {
           
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-600 mb-8">
-              Master the art of AI-assisted development with our comprehensive workflow guide. 
+              Master the art of AI-assisted development with our comprehensive workflow guide.
               Learn proven methodologies that boost development speed by 60-70%.
             </p>
 
@@ -27,7 +27,7 @@ export default function WorkflowGuidePage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 Getting Started</h2>
               <p className="text-gray-700 mb-4">
                 Our workflow is designed to integrate seamlessly with your existing development process. 
-                Whether you're working solo or with a team, these methodologies will transform how you build software.
+                Whether you&apos;re working solo or with a team, these methodologies will transform how you build software.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -40,7 +40,7 @@ export default function WorkflowGuidePage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">What You'll Learn</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">What You&apos;ll Learn</h3>
                   <ul className="text-gray-700 space-y-1">
                     <li>• AI persona management</li>
                     <li>• Prompt engineering techniques</li>
