@@ -5,6 +5,8 @@ import { Metadata } from 'next'
 import { products, categories, getFeaturedProducts } from '@/data/products'
 import { Product } from '@/types/product'
 import { CartProvider, useCart } from '@/contexts/CartContext'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 // Product Card Component
 function ProductCard({ product }: { product: Product }) {
@@ -198,7 +200,7 @@ function TechGearStore() {
   const featuredProducts = getFeaturedProducts()
 
   return (
-    <div className="min-h-screen bg-white">
+    <div>
       {/* Header */}
       <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="container-max py-8">
@@ -373,8 +375,12 @@ function TechGearStore() {
 // Main Page Component with Cart Provider
 export default function SampleProjectPage() {
   return (
-    <CartProvider>
-      <TechGearStore />
-    </CartProvider>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <CartProvider>
+        <TechGearStore />
+      </CartProvider>
+      <Footer />
+    </div>
   )
 }
