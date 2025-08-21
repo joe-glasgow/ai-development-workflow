@@ -19,10 +19,10 @@ export default function Header() {
             <Link href="/templates" className="hover:text-primary-200 transition-colors font-medium">
               Templates
             </Link>
-            <Link href="/personas" className="hover:text-primary-200 transition-colors font-medium">
+            <Link href="/templates/personas" className="hover:text-primary-200 transition-colors font-medium">
               Personas
             </Link>
-            <Link href="/workflows" className="hover:text-primary-200 transition-colors font-medium">
+            <Link href="/templates/workflows" className="hover:text-primary-200 transition-colors font-medium">
               Workflows
             </Link>
             <Link href="/sample-project" className="hover:text-primary-200 transition-colors font-medium">
@@ -64,10 +64,10 @@ export default function Header() {
               <Link href="/templates" className="hover:text-primary-200 transition-colors font-medium">
                 Templates
               </Link>
-              <Link href="/personas" className="hover:text-primary-200 transition-colors font-medium">
+              <Link href="/templates/personas" className="hover:text-primary-200 transition-colors font-medium">
                 Personas
               </Link>
-              <Link href="/workflows" className="hover:text-primary-200 transition-colors font-medium">
+              <Link href="/templates/workflows" className="hover:text-primary-200 transition-colors font-medium">
                 Workflows
               </Link>
               <Link href="/sample-project" className="hover:text-primary-200 transition-colors font-medium">
