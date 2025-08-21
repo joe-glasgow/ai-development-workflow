@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  // basePath: '/ai-development-workflow', // Commented out for local development
-  // assetPrefix: '/ai-development-workflow/', // Commented out for local development
+  basePath: isProd ? '/ai-development-workflow' : '',
+  assetPrefix: isProd ? '/ai-development-workflow/' : '',
 }
 
 module.exports = nextConfig
