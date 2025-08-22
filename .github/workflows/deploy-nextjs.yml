@@ -27,9 +27,7 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: |
-            package-lock.json
-            nextjs-site/package-lock.json
+          cache-dependency-path: nextjs-site/package-lock.json
 
       - name: Cache Next.js build
         uses: actions/cache@v4
@@ -44,7 +42,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci --prefer-offline --no-audit
           cd nextjs-site
           npm ci --prefer-offline --no-audit
 

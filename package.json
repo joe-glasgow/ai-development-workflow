@@ -6,7 +6,7 @@
   "scripts": {
     "test:tools": "cd tools && npm test",
     "lint:tools": "cd tools && npm run lint",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "devDependencies": {
     "husky": "^9.1.7"
