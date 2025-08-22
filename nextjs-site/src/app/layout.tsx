@@ -28,13 +28,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
         <link rel="canonical" href="https://joe-glasgow.github.io/ai-development-workflow/" />
       </head>
-      <body className="font-sans antialiased">
-        {children}
+      <body className="font-sans antialiased text-slate-100">
+        <div className="min-h-dvh">
+          {children}
+        </div>
       </body>
     </html>
   )

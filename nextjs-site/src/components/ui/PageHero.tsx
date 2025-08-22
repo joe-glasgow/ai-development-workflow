@@ -14,24 +14,24 @@ export default function PageHero({
   tipColor = 'blue' 
 }: PageHeroProps) {
   const colorClasses = {
-    blue: 'bg-blue-50 border-blue-200 text-blue-900 text-blue-800',
-    green: 'bg-green-50 border-green-200 text-green-900 text-green-800',
-    purple: 'bg-purple-50 border-purple-200 text-purple-900 text-purple-800',
-    orange: 'bg-orange-50 border-orange-200 text-orange-900 text-orange-800'
+    blue: 'glass-card border-primary-500/30 text-primary-300 text-blue-200',
+    green: 'glass-card border-green-500/30 text-green-300 text-green-200',
+    purple: 'glass-card border-purple-500/30 text-purple-300 text-purple-200',
+    orange: 'glass-card border-orange-500/30 text-orange-300 text-orange-200'
   }
 
   const [bgColor, borderColor, titleColor, textColor] = colorClasses[tipColor].split(' ')
 
   return (
     <div className="text-center mb-16">
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+      <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
         {title}
       </h1>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+      <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
         {description}
       </p>
       {tipTitle && tipDescription && (
-        <div className={`${bgColor} border ${borderColor} rounded-lg p-6 max-w-4xl mx-auto`}>
+        <div className={`${bgColor} border ${borderColor} rounded-2xl p-6 max-w-4xl mx-auto hover:shadow-glass-lg transition-all duration-300`}>
           <h3 className={`text-lg font-semibold ${titleColor} mb-2`}>{tipTitle}</h3>
           <p className={textColor}>
             {tipDescription}

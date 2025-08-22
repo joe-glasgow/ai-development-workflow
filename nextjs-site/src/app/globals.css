@@ -17,23 +17,49 @@
   --error-color: #ef4444;
 }
 
+/* Enhanced Glassmorphic dark theme utilities */
+@layer utilities {
+  .glass {
+    @apply bg-glass-base backdrop-blur-xl border border-glass-border shadow-glass;
+  }
+  .glass-light {
+    @apply bg-glass-light backdrop-blur-lg border border-glass-border-light shadow-glass;
+  }
+  .glass-medium {
+    @apply bg-glass-medium backdrop-blur-2xl border border-glass-border shadow-glass-lg;
+  }
+  .glass-dark {
+    @apply bg-glass-dark backdrop-blur-3xl border border-glass-border shadow-glass-xl;
+  }
+  .glass-hover:hover {
+    @apply bg-glass-hover shadow-glass-lg transform transition-all duration-300;
+  }
+  .glass-card {
+    @apply bg-glass-base backdrop-blur-xl border border-glass-border shadow-glass-lg rounded-2xl;
+  }
+  .glass-nav {
+    @apply bg-glass-medium backdrop-blur-2xl border-b border-glass-border shadow-glass-lg;
+  }
+  .glass-hero {
+    @apply bg-glass-light backdrop-blur-lg border border-glass-border-light shadow-glass rounded-3xl;
+  }
+}
+
 /* Custom component styles */
 @layer components {
   .btn {
-    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm transition-colors duration-200;
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-2xl shadow-glass transition-all duration-300 transform hover:scale-105;
   }
   
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+    @apply glass-medium text-white hover:shadow-glass-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 bg-gradient-to-r from-primary-600 to-accent-purple;
   }
   
   .btn-secondary {
-    @apply bg-white text-primary-600 border-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+    @apply glass-light text-white border-2 border-glass-border hover:border-primary-400 hover:shadow-glass-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
   }
   
-  .card {
-    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 transition-shadow duration-200 hover:shadow-md;
-  }
+  .card { @apply glass-card p-6 transition-all duration-300 hover:shadow-glass-lg hover:scale-105; }
   
   .section-padding {
     @apply py-16 px-4 sm:px-6 lg:px-8;
@@ -44,17 +70,13 @@
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-color: #60a5fa;
-    --secondary-color: #3b82f6;
-    --text-color: #f9fafb;
-    --text-light: #d1d5db;
-    --background-color: #111827;
-    --background-light: #1f2937;
-    --border-color: #374151;
-  }
+/* True dark background for sleek modern theme */
+html { 
+  background: #000000;
+  background-image: 
+    radial-gradient(600px 300px at 10% 20%, rgba(37, 99, 235, 0.15), transparent 50%),
+    radial-gradient(400px 200px at 90% 80%, rgba(99, 102, 241, 0.1), transparent 50%),
+    radial-gradient(300px 150px at 50% 50%, rgba(168, 85, 247, 0.08), transparent 50%);
 }
 
 /* Smooth scrolling */
@@ -66,4 +88,18 @@ html {
 *:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
+}
+
+/* Dark theme default text and selection for contrast */
+body { @apply text-slate-100; }
+::selection { @apply bg-primary-600 text-white; }
+
+/* Reduced transparency preference */
+@media (prefers-reduced-transparency: reduce) {
+  .glass { @apply bg-slate-800 bg-opacity-95 backdrop-blur-none; }
+}
+
+/* High contrast mode adjustments */
+@media (forced-colors: active) {
+  .glass { border: 1px solid CanvasText; }
 }

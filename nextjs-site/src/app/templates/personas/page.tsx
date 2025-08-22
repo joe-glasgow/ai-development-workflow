@@ -7,7 +7,7 @@ import { personas, commonPatterns, getGitHubTemplateUrl } from '@/data/templates
 export default function PersonasPage() {
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <Header />
       
       <main className="container-max section-padding">
@@ -22,18 +22,18 @@ export default function PersonasPage() {
         {/* Personas Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {personas.map((persona, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div key={index} className="glass-card p-6 hover:shadow-glass-xl transition-all duration-300 transform hover:scale-105">
               <div className="text-4xl mb-4">{persona.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{persona.name}</h3>
-              <p className="text-gray-600 mb-4">{persona.description}</p>
+              <h3 className="text-xl font-bold text-white mb-3">{persona.name}</h3>
+              <p className="text-slate-300 mb-4">{persona.description}</p>
               
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Key Skills:</h4>
+                <h4 className="font-semibold text-white mb-2">Key Skills:</h4>
                 <div className="flex flex-wrap gap-2">
                   {persona.skills.map((skill, skillIndex) => (
                     <span 
                       key={skillIndex}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
+                      className="px-3 py-1 glass-light text-slate-200 text-sm rounded-full border border-glass-border-light"
                     >
                       {skill}
                     </span>
@@ -42,15 +42,15 @@ export default function PersonasPage() {
               </div>
               
               <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2">Use Case:</h4>
-                <p className="text-sm text-gray-600">{persona.useCase}</p>
+                <h4 className="font-semibold text-white mb-2">Use Case:</h4>
+                <p className="text-sm text-slate-300">{persona.useCase}</p>
               </div>
               
               <a 
                 href={getGitHubTemplateUrl('persona', persona.name)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm"
+                className="inline-flex items-center text-primary-400 hover:text-accent-yellow font-medium text-sm transition-colors duration-200"
               >
                 View Template
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,30 +62,30 @@ export default function PersonasPage() {
         </div>
 
         {/* Getting Started Section */}
-        <div className="bg-gray-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Getting Started with Personas</h2>
+        <div className="glass-card p-8">
+          <h2 className="text-2xl font-bold text-white mb-6">Getting Started with Personas</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">1. Choose Your Persona</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-3">1. Choose Your Persona</h3>
+              <p className="text-slate-300 mb-4">
                 Select the persona that matches your current development phase or the expertise you need.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">2. Copy the Template</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-3">2. Copy the Template</h3>
+              <p className="text-slate-300 mb-4">
                 Use the GitHub template link to copy the persona context into your AI conversation.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">3. Customize for Your Project</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-3">3. Customize for Your Project</h3>
+              <p className="text-slate-300 mb-4">
                 Adapt the persona context with your specific project details and requirements.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">4. Get Specialized Responses</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-lg font-semibold text-white mb-3">4. Get Specialized Responses</h3>
+              <p className="text-slate-300 mb-4">
                 Receive role-specific guidance, best practices, and expert-level insights from your AI assistant.
               </p>
             </div>
