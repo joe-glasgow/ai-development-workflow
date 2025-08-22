@@ -274,3 +274,4 @@ MIT License - See [LICENSE](LICENSE) for details.
 **Ready to accelerate your development with AI?** Start with `pc init your-project-name` and experience the future of software development.
 
 **Need help?** Check our [CLI Installation Guide](docs/CLI_INSTALLATION_GUIDE.md) for troubleshooting and detailed setup instructions.
+test change
