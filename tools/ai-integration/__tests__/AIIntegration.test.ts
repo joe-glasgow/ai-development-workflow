@@ -1,7 +1,7 @@
 import { AIIntegration } from '../src/AIIntegration';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as inquirer from 'inquirer';
+import inquirer from 'inquirer';
 import axios from 'axios';
 
 // Mock modules

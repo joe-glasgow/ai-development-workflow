@@ -1,7 +1,7 @@
 import { PersonaManager } from '../src/PersonaManager';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as inquirer from 'inquirer';
+import inquirer from 'inquirer';
 
 // Mock modules
 jest.mock('fs');

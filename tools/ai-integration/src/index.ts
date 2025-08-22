@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander';
-import * as inquirer from 'inquirer';
+import inquirer from 'inquirer';
 import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';

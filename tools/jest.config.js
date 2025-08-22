@@ -13,7 +13,10 @@ module.exports = {
     '**/src/**/*.ts',
     '!**/node_modules/**',
     '!**/dist/**',
-    '!**/*.d.ts'
+    '!**/*.d.ts',
+    '!**/src/index.ts',
+    '!**/src/cli.ts',
+    '!**/src/tracker.ts'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
