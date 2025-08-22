@@ -61,7 +61,7 @@ export default function CLIToolsPage() {
                   <div className="text-accent-yellow mb-2"># Quick Commands</div>
                   <div>pc init my-project</div>
                   <div>pc start-phase discovery</div>
-                  <div>pc get-persona "Frontend Developer"</div>
+                  <div>pc get-persona &quot;Frontend Developer&quot;</div>
                   <div>pc status</div>
                 </div>
               </div>

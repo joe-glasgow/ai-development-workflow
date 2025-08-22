@@ -22,7 +22,7 @@ export default function WorkflowGuidePage() {
             <div className="glass rounded-xl p-8 mb-8">
               <h2 className="text-2xl font-bold text-white mb-4">🎯 Getting Started</h2>
               <p className="text-slate-300 mb-4">
-                Welcome to "Vibe Coding" - the modern approach to AI-assisted development! Our workflow is designed to be accessible to developers of all levels, from complete beginners to seasoned professionals.
+                Welcome to &quot;Vibe Coding&quot; - the modern approach to AI-assisted development! Our workflow is designed to be accessible to developers of all levels, from complete beginners to seasoned professionals.
               </p>
               
               <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-6 mb-6 border border-green-500/30">
@@ -55,7 +55,7 @@ export default function WorkflowGuidePage() {
                 <div>
                   <h3 className="font-semibold text-white mb-2">What You&apos;ll Learn</h3>
                   <ul className="text-slate-300 space-y-1">
-                    <li>• AI-assisted "vibe coding" techniques</li>
+                    <li>• AI-assisted &quot;vibe coding&quot; techniques</li>
                     <li>• Persona-based development approach</li>
                     <li>• Automated workflow management</li>
                     <li>• Quality assurance with AI</li>

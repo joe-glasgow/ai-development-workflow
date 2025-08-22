@@ -116,7 +116,7 @@ export default function QuickStart() {
               <p className="text-slate-300 text-sm mb-4">Project initialization and persona management</p>
               <div className="bg-black/40 p-3 rounded text-xs font-mono text-green-400">
                 pc init my-project<br/>
-                pc get-persona "Frontend Developer"
+                pc get-persona &quot;Frontend Developer&quot;
               </div>
             </div>
 

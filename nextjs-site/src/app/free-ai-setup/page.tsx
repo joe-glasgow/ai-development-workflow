@@ -88,7 +88,7 @@ export default function FreeAISetupPage() {
                   <div></div>
                   <div># Configure in workflow</div>
                   <div>ai-workflow setup</div>
-                  <div># Choose "Google Gemini - FREE Tier"</div>
+                  <div># Choose &quot;Google Gemini - FREE Tier&quot;</div>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -133,7 +133,7 @@ export default function FreeAISetupPage() {
                   <div></div>
                   <div># Configure in workflow</div>
                   <div>ai-workflow setup</div>
-                  <div># Choose "Hugging Face - FREE Tier"</div>
+                  <div># Choose &quot;Hugging Face - FREE Tier&quot;</div>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -182,7 +182,7 @@ export default function FreeAISetupPage() {
                 </div>
                 <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div>ai-workflow setup</div>
-                  <div># Choose "OpenAI (GPT-4) - Paid"</div>
+                  <div># Choose &quot;OpenAI (GPT-4) - Paid&quot;</div>
                   <div># Model: gpt-3.5-turbo</div>
                 </div>
               </div>
@@ -208,7 +208,7 @@ export default function FreeAISetupPage() {
                 </div>
                 <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm">
                   <div>ai-workflow setup</div>
-                  <div># Choose "Anthropic (Claude) - Paid"</div>
+                  <div># Choose &quot;Anthropic (Claude) - Paid&quot;</div>
                   <div># Model: claude-3-haiku-20240307</div>
                 </div>
               </div>
@@ -270,7 +270,7 @@ export default function FreeAISetupPage() {
                       <h4 className="text-white font-medium">Setup Workflow</h4>
                       <div className="bg-black/40 p-2 rounded text-xs font-mono text-green-400 mt-2">
                         ai-workflow setup<br/>
-                        # Choose "Local Model (Ollama) - FREE"
+                        # Choose &quot;Local Model (Ollama) - FREE&quot;
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function FreeAISetupPage() {
                       <h4 className="text-white font-medium">Configure Workflow</h4>
                       <div className="bg-black/40 p-2 rounded text-xs font-mono text-green-400 mt-2">
                         ai-workflow setup<br/>
-                        # Choose "Google Gemini - FREE Tier"
+                        # Choose &quot;Google Gemini - FREE Tier&quot;
                       </div>
                     </div>
                   </div>
