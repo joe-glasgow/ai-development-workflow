@@ -69,7 +69,7 @@ export default function Header() {
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex" aria-label="Main navigation" role="navigation">
+          <nav className="hidden lg:flex" aria-label="Main navigation" role="navigation">
             <div className="relative">
               {/* Gradient border container */}
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full p-[2px] shadow-2xl">
@@ -192,7 +192,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-md hover:bg-glass-hover transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+            className="lg:hidden p-2 rounded-md hover:bg-glass-hover transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
@@ -211,7 +211,7 @@ export default function Header() {
       </div>
     </header>
     {isMenuOpen && (
-      <div className="fixed inset-0 z-40 md:hidden">
+      <div className="fixed inset-0 z-40 lg:hidden">
         <div
           className="fixed inset-0 bg-black/60 backdrop-blur-sm"
           onClick={() => setIsMenuOpen(false)}
