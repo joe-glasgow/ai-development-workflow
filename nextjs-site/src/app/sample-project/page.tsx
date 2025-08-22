@@ -5,9 +5,6 @@ import Image from 'next/image'
 import { products, categories, getFeaturedProducts } from '@/data/products'
 import { Product } from '@/types/product'
 import { CartProvider, useCart } from '@/contexts/CartContext'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 // Product Card Component
 function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart()
@@ -379,12 +376,10 @@ function TechGearStore() {
 // Main Page Component with Cart Provider
 export default function SampleProjectPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <main>
       <CartProvider>
         <TechGearStore />
       </CartProvider>
-      <Footer />
-    </div>
+    </main>
   )
 }

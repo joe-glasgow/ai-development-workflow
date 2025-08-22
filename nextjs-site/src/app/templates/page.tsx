@@ -1,6 +1,4 @@
 import { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Templates - AI-Powered Development Workflow',
@@ -9,8 +7,7 @@ export const metadata: Metadata = {
 
 export default function TemplatesPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
+    <main className="container-max section-padding">
       {/* Header */}
       <div className="glass shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -257,7 +254,6 @@ export default function TemplatesPage() {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </main>
   )
 }

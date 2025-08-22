@@ -1,5 +1,3 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 import PageHero from '@/components/ui/PageHero'
 import GettingStarted from '@/components/ui/GettingStarted'
 import { personas, commonPatterns, getGitHubTemplateUrl } from '@/data/templates'
@@ -7,10 +5,7 @@ import { personas, commonPatterns, getGitHubTemplateUrl } from '@/data/templates
 export default function PersonasPage() {
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="container-max section-padding">
+    <main className="container-max section-padding">
         <PageHero
           title="AI Personas Library"
           description="Role-specific AI personas that provide context and expertise for different aspects of software development. Each persona brings specialized knowledge to enhance your AI-assisted workflow."
@@ -93,9 +88,6 @@ export default function PersonasPage() {
         </div>
 
         <GettingStarted links={commonPatterns.gettingStartedLinks} />
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   )
 }

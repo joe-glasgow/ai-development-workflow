@@ -4,7 +4,8 @@
   "description": "CLI tool for managing AI personas",
   "main": "src/cli.ts",
   "bin": {
-    "persona-cli": "./bin/persona-cli"
+    "persona-cli": "./bin/persona-cli",
+    "pc": "./bin/persona-cli"
   },
   "scripts": {
     "build": "tsc",
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@types/inquirer": "^8.0.0",
     "typescript": "^4.8.0"
   }
 }

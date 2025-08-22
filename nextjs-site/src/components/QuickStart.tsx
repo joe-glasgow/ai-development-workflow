@@ -14,84 +14,144 @@ export default function QuickStart() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Option 1 */}
+          {/* Option 1 - NEW: Complete AI-Integrated Workflow */}
+          <div className="card border-2 border-accent-yellow/30">
+            <div className="flex items-center mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-accent-yellow to-accent-pink text-black rounded-full flex items-center justify-center font-bold mr-3">
+                1
+              </div>
+              <h3 className="text-xl font-semibold text-white">Complete AI Workflow</h3>
+              <span className="ml-2 px-2 py-1 bg-accent-yellow text-black text-xs font-bold rounded-full">NEW</span>
+            </div>
+            <p className="text-slate-300 mb-6">
+              Automated setup with functional CLI tools, direct AI integration, and progress tracking.
+            </p>
+            <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm mb-6 border border-glass-border">
+              <div>git clone https://github.com/joe-glasgow/ai-development-workflow.git</div>
+              <div>cd ai-development-workflow</div>
+              <div>chmod +x setup.sh && ./setup.sh</div>
+              <div>pc init my-project</div>
+              <div>cd my-project && aiw setup</div>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-6">
+              <span className="px-3 py-1 bg-accent-yellow/20 text-accent-yellow rounded-full text-sm">Automated Setup</span>
+              <span className="px-3 py-1 bg-accent-cyan/20 text-accent-cyan rounded-full text-sm">AI Integration</span>
+              <span className="px-3 py-1 bg-accent-purple/20 text-accent-purple rounded-full text-sm">Progress Tracking</span>
+            </div>
+            <Link href="/workflow-guide" className="btn btn-primary w-full">
+              Start AI Workflow
+            </Link>
+          </div>
+
+          {/* Option 2 - FREE AI Option */}
+          <div className="card border-2 border-green-400/30">
+            <div className="flex items-center mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-accent-cyan text-black rounded-full flex items-center justify-center font-bold mr-3">
+                2
+              </div>
+              <h3 className="text-xl font-semibold text-white">FREE AI Setup</h3>
+              <span className="ml-2 px-2 py-1 bg-green-400 text-black text-xs font-bold rounded-full">FREE</span>
+            </div>
+            <p className="text-slate-300 mb-6">
+              Get started with completely free AI options - no API costs, perfect for learning and experimentation.
+            </p>
+            <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm mb-6 border border-glass-border">
+              <div># Install free local AI</div>
+              <div>curl -fsSL https://ollama.ai/install.sh | sh</div>
+              <div>ollama pull codellama:7b</div>
+              <div>ollama serve</div>
+              <div># Setup workflow with free AI</div>
+              <div>aiw setup  # Choose Ollama</div>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-6">
+              <span className="px-3 py-1 bg-green-400/20 text-green-400 rounded-full text-sm">$0 Cost</span>
+              <span className="px-3 py-1 bg-accent-cyan/20 text-accent-cyan rounded-full text-sm">Local AI</span>
+              <span className="px-3 py-1 bg-accent-purple/20 text-accent-purple rounded-full text-sm">Privacy First</span>
+            </div>
+            <Link href="/free-ai-setup" className="btn btn-secondary w-full">
+              Free AI Guide
+            </Link>
+          </div>
+
+          {/* Option 3 - Sample Project */}
           <div className="card">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                1
+                3
               </div>
-              <h3 className="text-xl font-semibold text-white">Follow the Sample Project</h3>
+              <h3 className="text-xl font-semibold text-white">Sample Project</h3>
             </div>
             <p className="text-slate-300 mb-6">
               Step-by-step walkthrough using the TechGear Store project with real AI logs and proven results.
             </p>
             <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm mb-6 border border-glass-border">
-              <div>git clone https://github.com/joe-glasgow/ai-development-workflow.git</div>
               <div>cd ai-development-workflow/sample-project</div>
               <div>./scripts/setup-local.sh</div>
-              <div># Follow WORKFLOW_EXECUTION_LOG.md step-by-step</div>
+              <div># Follow WORKFLOW_EXECUTION_LOG.md</div>
             </div>
             <div className="flex flex-wrap gap-2 mb-6">
               <span className="px-3 py-1 bg-glass-base text-green-200 rounded-full text-sm">Real AI Logs</span>
               <span className="px-3 py-1 bg-glass-base text-blue-200 rounded-full text-sm">Proven Results</span>
               <span className="px-3 py-1 bg-glass-base text-purple-200 rounded-full text-sm">Complete Example</span>
             </div>
-            <Link href="/sample-project" className="btn btn-primary w-full">
+            <Link href="/sample-project" className="btn btn-secondary w-full">
               View Sample Project
             </Link>
           </div>
+        </div>
 
-          {/* Option 2 */}
-          <div className="card">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                2
+        {/* NEW: CLI Tools Section */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">🛠️ Available CLI Tools</h3>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="glass-card p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-accent-yellow/20 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-accent-yellow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-white">pc</h4>
               </div>
-              <h3 className="text-xl font-semibold text-white">Start Your Own Project</h3>
+              <p className="text-slate-300 text-sm mb-4">Project initialization and persona management</p>
+              <div className="bg-black/40 p-3 rounded text-xs font-mono text-green-400">
+                pc init my-project<br/>
+                pc get-persona "Frontend Developer"
+              </div>
             </div>
-            <p className="text-slate-300 mb-6">
-              Initialize a new project with customized personas and follow our comprehensive workflow guide.
-            </p>
-            <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm mb-6 border border-glass-border">
-              <div>cd ai-development-workflow</div>
-              <div>./tools/persona-manager/bin/persona-cli init my-project</div>
-              <div># Customize personas and follow workflow-guide/</div>
-            </div>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-glass-base text-orange-200 rounded-full text-sm">Custom Setup</span>
-              <span className="px-3 py-1 bg-glass-base text-blue-200 rounded-full text-sm">Guided Process</span>
-              <span className="px-3 py-1 bg-glass-base text-green-200 rounded-full text-sm">Flexible</span>
-            </div>
-            <Link href="/workflow-guide" className="btn btn-secondary w-full">
-              View Workflow Guide
-            </Link>
-          </div>
 
-          {/* Option 3 */}
-          <div className="card">
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
-                3
+            <div className="glass-card p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-accent-cyan/20 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-accent-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-white">aiw</h4>
               </div>
-              <h3 className="text-xl font-semibold text-white">Use Templates</h3>
+              <p className="text-slate-300 text-sm mb-4">Direct AI integration and code generation</p>
+              <div className="bg-black/40 p-3 rounded text-xs font-mono text-green-400">
+                aiw setup<br/>
+                aiw chat<br/>
+                aiw generate
+              </div>
             </div>
-            <p className="text-slate-300 mb-6">
-              Jump-start with ready-to-use templates for different project types and development scenarios.
-            </p>
-            <div className="bg-black/60 text-green-400 p-4 rounded-lg font-mono text-sm mb-6 border border-glass-border">
-              <div># Choose from various project templates</div>
-              <div>cp -r templates/project-templates/saas-dashboard my-project</div>
-              <div>cd my-project</div>
-              <div># Follow template-specific setup instructions</div>
+
+            <div className="glass-card p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-accent-purple/20 rounded-lg flex items-center justify-center mr-3">
+                  <svg className="w-5 h-5 text-accent-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z" />
+                  </svg>
+                </div>
+                <h4 className="font-bold text-white">wt</h4>
+              </div>
+              <p className="text-slate-300 text-sm mb-4">Progress tracking and quality gates</p>
+              <div className="bg-black/40 p-3 rounded text-xs font-mono text-green-400">
+                wt status<br/>
+                wt complete-phase
+              </div>
             </div>
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="px-3 py-1 bg-glass-base text-red-200 rounded-full text-sm">Quick Start</span>
-              <span className="px-3 py-1 bg-glass-base text-blue-200 rounded-full text-sm">Pre-configured</span>
-              <span className="px-3 py-1 bg-glass-base text-purple-200 rounded-full text-sm">Multiple Types</span>
-            </div>
-            <Link href="/templates" className="btn btn-secondary w-full">
-              Browse Templates
-            </Link>
           </div>
         </div>
 

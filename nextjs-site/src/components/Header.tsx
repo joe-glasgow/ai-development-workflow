@@ -79,6 +79,34 @@ export default function Header() {
               <div className="relative glass-light backdrop-blur-xl bg-black/20 border-0 rounded-full p-2 shadow-2xl">
                 <div className="flex space-x-2">
                   <Link
+                    href="/free-ai-setup"
+                    aria-current={isActiveRoute('/free-ai-setup') ? 'page' : undefined}
+                    className={`relative px-5 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
+                      isActiveRoute('/free-ai-setup') 
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/50 border-0' 
+                        : 'text-slate-200 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm hover:shadow-lg'
+                    }`}
+                  >
+                    {isActiveRoute('/free-ai-setup') && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-md opacity-75 -z-10"></div>
+                    )}
+                    Free AI
+                  </Link>
+                  <Link
+                    href="/cli-tools"
+                    aria-current={isActiveRoute('/cli-tools') ? 'page' : undefined}
+                    className={`relative px-5 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
+                      isActiveRoute('/cli-tools') 
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/50 border-0' 
+                        : 'text-slate-200 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm hover:shadow-lg'
+                    }`}
+                  >
+                    {isActiveRoute('/cli-tools') && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-md opacity-75 -z-10"></div>
+                    )}
+                    CLI Tools
+                  </Link>
+                  <Link
                     href="/templates"
                     aria-current={isActiveRoute('/templates') ? 'page' : undefined}
                     className={`relative px-5 py-3 rounded-full font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
@@ -203,6 +231,36 @@ export default function Header() {
             {/* Mobile navigation content */}
             <div className="relative glass-card backdrop-blur-xl bg-black/20 border-0 rounded-2xl shadow-2xl animate-in slide-in-from-top-2 duration-200">
               <div className="px-4 pt-4 pb-5 space-y-3">
+                <Link
+                  href="/free-ai-setup"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-current={isActiveRoute('/free-ai-setup') ? 'page' : undefined}
+                  className={`relative block px-5 py-4 rounded-xl font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
+                    isActiveRoute('/free-ai-setup') 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/50 border-0' 
+                      : 'text-slate-200 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm hover:shadow-lg'
+                  }`}
+                >
+                  {isActiveRoute('/free-ai-setup') && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-75 -z-10"></div>
+                  )}
+                  Free AI Setup
+                </Link>
+                <Link
+                  href="/cli-tools"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-current={isActiveRoute('/cli-tools') ? 'page' : undefined}
+                  className={`relative block px-5 py-4 rounded-xl font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent ${
+                    isActiveRoute('/cli-tools') 
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-2xl shadow-purple-500/50 border-0' 
+                      : 'text-slate-200 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm hover:shadow-lg'
+                  }`}
+                >
+                  {isActiveRoute('/cli-tools') && (
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur-md opacity-75 -z-10"></div>
+                  )}
+                  CLI Tools
+                </Link>
                 <Link
                   href="/templates"
                   onClick={() => setIsMenuOpen(false)}

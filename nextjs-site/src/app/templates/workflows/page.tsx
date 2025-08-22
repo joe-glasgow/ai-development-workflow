@@ -1,6 +1,3 @@
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export default function WorkflowsPage() {
   const workflows = [
     {
@@ -105,10 +102,7 @@ export default function WorkflowsPage() {
   ]
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
-      <main className="container-max section-padding">
+    <main className="container-max section-padding">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -267,9 +261,6 @@ export default function WorkflowsPage() {
             Based on real-world implementation results from the TechGear Store sample project
           </p>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+    </main>
   )
 }

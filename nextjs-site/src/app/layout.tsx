@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://joe-glasgow.github.io/ai-development-workflow/'),
@@ -35,7 +37,9 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased text-slate-100">
         <div className="min-h-dvh">
+          <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

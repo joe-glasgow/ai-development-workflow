@@ -54,7 +54,7 @@ export default function Hero() {
           {/* What's New Badge */}
           <div className="inline-flex items-center px-6 py-3 glass-card text-sm font-medium mb-12 hover:shadow-glass-lg transition-all duration-300">
             <div className="w-2 h-2 bg-accent-yellow rounded-full mr-3 animate-pulse"></div>
-            <span className="text-slate-200">🚀 What&apos;s New: Complete Sample Project with Real AI Logs</span>
+            <span className="text-slate-200">🚀 What&apos;s New: Complete Functional Tools + FREE AI Integration</span>
           </div>
 
           {/* Enhanced Key Features Grid */}
