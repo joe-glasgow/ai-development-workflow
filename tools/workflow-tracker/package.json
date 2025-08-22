@@ -1,0 +1,26 @@
+{
+  "name": "workflow-tracker",
+  "version": "1.0.0",
+  "description": "Track AI-powered development workflow progress",
+  "main": "src/tracker.ts",
+  "bin": {
+    "workflow-tracker": "./bin/workflow-tracker",
+    "wt": "./bin/workflow-tracker"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/tracker.js",
+    "dev": "ts-node src/tracker.ts"
+  },
+  "dependencies": {
+    "commander": "^9.0.0",
+    "inquirer": "^8.0.0",
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/inquirer": "^8.0.0",
+    "typescript": "^4.8.0",
+    "ts-node": "^10.0.0"
+  }
+}
