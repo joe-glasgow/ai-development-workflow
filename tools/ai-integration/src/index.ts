@@ -6,7 +6,7 @@ import axios from 'axios';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from 'dotenv';
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 dotenv.config();
 

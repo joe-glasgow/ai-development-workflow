@@ -9,7 +9,9 @@
     "build": "cd persona-manager && npm run build && cd ../ai-integration && npm run build && cd ../workflow-tracker && npm run build",
     "lint": "eslint . --ext .ts,.js",
     "lint:fix": "eslint . --ext .ts,.js --fix",
-    "prepare": "husky"
+    "validate": "node validate-setup.js",
+    "validate:quick": "node validate-setup.js --skip-tests",
+    "prepare": "husky || echo \"⚠️  Husky not found - this is normal during setup and won't affect functionality\""
   },
   "workspaces": [
     "persona-manager",

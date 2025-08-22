@@ -18,7 +18,7 @@ module.exports = {
   },
   rules: {
     // TypeScript specific rules
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
     
     // General rules
     'no-console': 'off', // CLI tools need console output

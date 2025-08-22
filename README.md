@@ -10,6 +10,7 @@ A comprehensive framework for leveraging AI throughout the entire development li
 - **Automation Tools**: CLI tools for persona management and workflow tracking
 - **✨ NEW: Direct AI Integration**: Built-in AI chat and code generation
 - **✨ NEW: Automated Workflow Tracking**: Progress monitoring and quality gates
+- **✨ NEW: Guided Tutorial**: Interactive hands-on tutorial (`npm run tutorial`)
 
 ## 📊 Proven Results
 
@@ -26,7 +27,10 @@ Based on the TechGear Store sample project:
 git clone https://github.com/yourusername/ai-development-workflow.git
 cd ai-development-workflow
 
-# One-command setup (installs and builds all tools)
+# Quick setup with npm (recommended)
+npm run setup
+
+# Alternative: Shell script setup
 chmod +x setup.sh
 ./setup.sh
 
@@ -242,10 +246,31 @@ wt status       # See overall progress
 
 - **[Complete Workflow Guide](workflow-guide/README.md)**: Detailed methodology
 - **[CLI Installation Guide](docs/CLI_INSTALLATION_GUIDE.md)**: Installation troubleshooting and solutions
+- **[Testing Troubleshooting Guide](docs/TESTING_TROUBLESHOOTING.md)**: Common testing issues and solutions
 - **[Prerequisites Guide](docs/PREREQUISITES.md)**: System requirements and setup
 - **[Sample Project](sample-project/README.md)**: Working implementation
 - **[Templates Library](templates/README.md)**: Personas, projects, and prompts
 - **[GitHub Pages](https://yourusername.github.io/ai-development-workflow/)**: Interactive documentation
+
+### 🔍 Setup Validation
+
+Before starting development, validate your setup:
+
+```bash
+# Run comprehensive setup validation
+cd tools && npm run validate
+
+# Quick validation (skips tests)
+cd tools && npm run validate:quick
+```
+
+The validation script checks:
+- Node.js and npm versions
+- Project structure and dependencies
+- TypeScript configuration
+- Jest testing setup
+- Build process
+- Environment variables
 
 ## 🧹 Uninstalling
 
@@ -256,10 +281,13 @@ To completely remove all tools and configurations:
 ```
 
 The cleanup script will safely remove:
-- All CLI tools and dependencies
+- All CLI tools and dependencies (including root and tools directory dependencies)
 - Global command symlinks
 - Generated project files (optional)
 - Website dependencies (optional)
+- All node_modules and package-lock.json files for a clean slate
+
+After cleanup, you can run `npm run setup` to reinstall everything fresh.
 
 ## 🤝 Contributing
 

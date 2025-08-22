@@ -125,6 +125,18 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     cd ..
 fi
 
+# Run validation to check setup
+echo ""
+echo "🔍 Validating setup..."
+cd tools
+if npm run validate; then
+    echo "✅ Setup validation passed!"
+else
+    echo "⚠️  Setup validation found issues. Check the output above."
+    echo "💡 You can run 'cd tools && npm run validate' anytime to re-check."
+fi
+cd ..
+
 echo ""
 echo "🎉 Setup Complete!"
 echo "=================="

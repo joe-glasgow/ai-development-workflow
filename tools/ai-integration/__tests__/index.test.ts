@@ -10,7 +10,6 @@ const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
 const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
 
 // Mock process.exit
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const _mockExit = jest.spyOn(process, 'exit').mockImplementation((_code?: string | number | null | undefined) => {
   return undefined as never;
 });

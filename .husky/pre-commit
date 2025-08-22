@@ -11,11 +11,11 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Run tools linting
-echo "🔧 Running tools linting..."
+# Run linting for all projects
+echo "🔧 Running linting for all projects..."
 npm run lint
 if [ $? -ne 0 ]; then
-  echo "❌ Tools linting failed. Please fix the linting errors before committing."
+  echo "❌ Linting failed. Please fix the linting errors before committing."
   exit 1
 fi
 

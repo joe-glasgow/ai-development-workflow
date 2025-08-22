@@ -100,6 +100,28 @@ fi
 echo ""
 echo "🧽 Cleaning up local installations..."
 
+# Clean root dependencies
+echo "  Cleaning root dependencies..."
+if [ -f "package.json" ]; then
+    echo "    Removing root node_modules..."
+    rm -rf node_modules
+    echo "    Removing root package-lock.json..."
+    rm -f package-lock.json
+fi
+
+# Clean tools directory shared dependencies
+if [ -d "tools" ]; then
+    echo "  Cleaning tools directory..."
+    cd tools
+    if [ -f "package.json" ]; then
+        echo "    Removing tools node_modules..."
+        rm -rf node_modules
+        echo "    Removing tools package-lock.json..."
+        rm -f package-lock.json
+    fi
+    cd ..
+fi
+
 # Clean persona-manager
 if [ -d "tools/persona-manager" ]; then
     echo "  Cleaning persona-manager..."

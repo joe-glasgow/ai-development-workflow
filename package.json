@@ -4,8 +4,12 @@
   "description": "AI-powered development workflow with CLI tools",
   "private": true,
   "scripts": {
+    "setup": "npm install && cd tools/persona-manager && npm install && cd ../ai-integration && npm install && cd ../workflow-tracker && npm install && cd .. && npm run validate",
     "test:tools": "cd tools && npm test",
     "lint:tools": "cd tools && npm run lint",
+    "lint:nextjs": "cd nextjs-site && npm run lint",
+    "lint": "npm run lint:tools && npm run lint:nextjs",
+    "tutorial": "node guided-workflow-tutorial.js",
     "prepare": "husky || true"
   },
   "devDependencies": {
