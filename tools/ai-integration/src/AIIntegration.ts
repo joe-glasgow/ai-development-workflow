@@ -137,7 +137,8 @@ export class AIIntegration {
     console.log(chalk.gray(`Persona: ${context.activePersona || 'None'}`));
     console.log(chalk.yellow('Type "exit" to quit, "persona [name]" to switch persona\n'));
 
-    while (true) {
+    let chatActive = true;
+    while (chatActive) {
       const { prompt } = await inquirer.prompt([
         {
           type: 'input',
@@ -147,6 +148,7 @@ export class AIIntegration {
       ]);
 
       if (prompt.toLowerCase() === 'exit') {
+        chatActive = false;
         break;
       }
 

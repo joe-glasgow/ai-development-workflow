@@ -37,14 +37,6 @@ interface QualityGate {
   notes: string;
 }
 
-interface ProjectMetrics {
-  developmentSpeed: number;
-  codeQuality: number;
-  testCoverage: number;
-  deploymentFrequency: number;
-  bugRate: number;
-}
-
 class WorkflowTracker {
   private configPath: string;
   private trackingPath: string;

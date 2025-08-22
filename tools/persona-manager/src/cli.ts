@@ -7,15 +7,6 @@ import * as path from 'path';
 
 const program = new Command();
 
-interface PersonaConfig {
-  name: string;
-  role: string;
-  responsibilities: string[];
-  communicationStyle: string;
-  keyPrompts: string[];
-  expertiseAreas: string[];
-}
-
 interface ProjectConfig {
   name: string;
   type: string;

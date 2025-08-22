@@ -1,0 +1,18 @@
+{
+  "name": "ai-development-workflow",
+  "version": "1.0.0",
+  "description": "AI-powered development workflow with CLI tools",
+  "private": true,
+  "scripts": {
+    "test:tools": "cd tools && npm test",
+    "lint:tools": "cd tools && npm run lint",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  },
+  "workspaces": [
+    "tools",
+    "nextjs-site"
+  ]
+}

@@ -143,7 +143,6 @@ describe('AIIntegration', () => {
   describe('switchPersona', () => {
     it('should switch to existing persona', async () => {
       const personaName = 'Frontend Developer';
-      const mockPersonaContent = '# Frontend Developer\nExpert in React';
       const mockContext = {
         projectName: 'Test Project',
         currentPhase: 'Development',
