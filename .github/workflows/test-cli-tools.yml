@@ -24,11 +24,10 @@ jobs:
       with:
         node-version: '20.x'
         cache: 'npm'
-        cache-dependency-path: 'tools/package-lock.json'
+        cache-dependency-path: 'package-lock.json'
     
     - name: Install dependencies
-      working-directory: ./tools
-      run: npm ci
+      run: npm install
     
     - name: Run linting
       working-directory: ./tools
@@ -77,11 +76,10 @@ jobs:
       with:
         node-version: '20.x'
         cache: 'npm'
-        cache-dependency-path: 'tools/package-lock.json'
+        cache-dependency-path: 'package-lock.json'
     
     - name: Install dependencies
-      working-directory: ./tools
-      run: npm ci
+      run: npm install
     
     - name: Build all tools
       working-directory: ./tools
@@ -143,11 +141,10 @@ jobs:
       with:
         node-version: '20.x'
         cache: 'npm'
-        cache-dependency-path: 'tools/package-lock.json'
+        cache-dependency-path: 'package-lock.json'
     
     - name: Install dependencies
-      working-directory: ./tools
-      run: npm ci
+      run: npm install
     
     - name: Check test coverage threshold
       working-directory: ./tools

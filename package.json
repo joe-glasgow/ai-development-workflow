@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "setup": "npm install && cd tools/persona-manager && npm install && cd ../ai-integration && npm install && cd ../workflow-tracker && npm install && cd .. && npm run validate",
+    "test": "npm run test:tools",
     "test:tools": "cd tools && npm test",
     "lint:tools": "cd tools && npm run lint",
     "lint:nextjs": "cd nextjs-site && npm run lint",
